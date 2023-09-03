@@ -1,16 +1,17 @@
 ---
 interface Props {
-  title: string;
   tagline?: string;
   align?: "start" | "center";
 }
 
-const { align = "center", tagline, title } = Astro.props;
+const { align = "center", tagline } = Astro.props;
 ---
 
 <header class:list={["hero stack gap-8", align]}>
   <div class="stack gap-8">
-    <h1 class="title">{title}</h1>
+    <h1 class="title">
+      Hola mi nombre es <span class="name-title">Jairo Vera</span>
+    </h1>
     {tagline && <p class="tagline">{tagline}</p>}
   </div>
   <slot />
@@ -28,11 +29,16 @@ const { align = "center", tagline, title } = Astro.props;
     margin-inline: auto;
   }
 
+  .tagline {
+    opacity: 0.75;
+  }
   .title {
     font-size: var(--text-3xl);
-    color: var(--gray-0);
+    color: var(--gray-50);
   }
-
+  .name-title {
+    color: var(--accent-regular);
+  }
   @media (min-width: 50em) {
     .hero {
       font-size: var(--text-xl);

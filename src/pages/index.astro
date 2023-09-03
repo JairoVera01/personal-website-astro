@@ -26,12 +26,11 @@ const projects = (await getCollection("work"))
 ---
 
 <BaseLayout>
-  <div class="stack gap-20 lg:gap-48">
+  <div class="stack gap-8 lg:gap-20">
     <div class="wrapper stack gap-8 lg:gap-20">
       <header class="hero">
         <Hero
-          title="Hola, mi nombre es Jairo Vera"
-          tagline="Desarrollador Web Front-End Junior & Fotógrafo & Ingeniero de Sistemas por la Universidad Privada del Norte (Lima - Perú)"
+          tagline="Desarrollador Web Front-End  & Ingeniero de Sistemas (Lima - Perú)"
           align="start"
         >
           <div class="roles">
@@ -41,9 +40,6 @@ const projects = (await getCollection("work"))
             <Pill>
               <Icon icon="graduation-logo" size="1.33em" /> Ingeniera de Sistemas
             </Pill>
-            <!-- <Pill>
-              <Icon icon="pencil-line" size="1.33em" /> Front-End Junior
-            </Pill> -->
           </div>
         </Hero>
 
@@ -57,7 +53,7 @@ const projects = (await getCollection("work"))
       <Skills />
     </div>
 
-    <main class="wrapper stack gap-20 lg:gap-48" >
+    <main class="wrapper stack gap-20 lg:gap-48">
       <section class="section with-background with-cta">
         <header class="section-header stack gap-2 lg:gap-4" id="mis-proyectos">
           <h3>Mis proyectos</h3>
@@ -77,13 +73,6 @@ const projects = (await getCollection("work"))
               ))
             }
           </Grid>
-        </div>
-
-        <div class="cta">
-          <CallToAction href="/work/">
-            Ver Todo
-            <Icon icon="arrow-right" size="1.2em" />
-          </CallToAction>
         </div>
       </section>
 
@@ -142,7 +131,6 @@ const projects = (await getCollection("work"))
 
   @media (min-width: 992px) {
     .hero {
-      
       display: grid;
       grid-template-columns: 6fr 4fr;
       padding-inline: 2.5rem;
